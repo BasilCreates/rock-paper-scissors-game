@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dead Zone
+  - Paper Camera
+  - Rock Camera
+  - Scissors Camera
+  - Rock CPU
+  - Paper CPU
+  - Scissor CPU
+  - Rock
+  - Paper
+  - Scissors
+  - Paper Projectile
+  - Rock Projectile
+  - Scissors Projectile
   layers:
   - Default
   - TransparentFX

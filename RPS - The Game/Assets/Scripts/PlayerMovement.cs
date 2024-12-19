@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f; // Movement speed
     public float jumpForce = 5f; // Force applied when jumping
     public float fallMultiplier = 5f;
+    public float lookSpeedX = 2f; // Rotation speed for the mouse X axis
     public Rigidbody rb; // Reference to the Rigidbody component
     public LayerMask groundMask; // LayerMask to define what is considered ground
 
@@ -17,10 +18,18 @@ public class PlayerMovement : MonoBehaviour
         {
             rb = GetComponent<Rigidbody>();
         }
+
+        // Lock and hide the cursor for a better experience
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
     {
+        // Mouse look functionality (left and right)
+        float mouseX = Input.GetAxis("Mouse X") * lookSpeedX;
+        transform.Rotate(0, mouseX, 0);
+
         // Create a movement vector
         Vector3 moveDirection = Vector3.zero;
 
@@ -63,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // Check if the player is grounded. A physics,checksphere means it makes an invisible sphere that checks the radius around the object.
-        //it checks if anything intersects inside the sphere like a groundmask, then makes the bool true or false depending.
+        // it checks if anything intersects inside the sphere like a groundmask, then makes the bool true or false depending.
         isGrounded = Physics.CheckSphere(transform.position, 50f, groundMask);
     }
 
@@ -71,8 +80,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            transform.position += new Vector3(0, jumpForce, 0); //manually adds height to the character after jumping
+            transform.position += new Vector3(0, jumpForce, 0); // manually adds height to the character after jumping
         }
     }
-
 }

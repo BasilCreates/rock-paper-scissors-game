@@ -7,7 +7,9 @@ public class UIManager : MonoBehaviour
 {
     void Start()
     {
-        
+        // Make sure cursor is visible and unlocked when the scene is loaded
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     void Update()
     {
@@ -19,5 +21,15 @@ public class UIManager : MonoBehaviour
     {
         //loads up the Rock Paper Scissors screen
         SceneManager.LoadScene("RPS Screen");
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("RPS Gameplay");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("RPS - Opening Menu");
     }
 }

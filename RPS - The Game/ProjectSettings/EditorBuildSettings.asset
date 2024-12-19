@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RPS - Opening Menu.unity
     guid: 333847ddbb9394e4dae0f31e584bc5d0
+  - enabled: 1
+    path: Assets/Scenes/RPS Gameplay.unity
+    guid: 8b9553bba7a4fe84a8384b126d3e4acd
+  - enabled: 1
+    path: Assets/Scenes/You Win.unity
+    guid: 2007a82cc64838f498bc63d257f3022e
+  - enabled: 1
+    path: Assets/Scenes/You Lose.unity
+    guid: 5d862e8f90de50d4abd7aeb6e5538655
   m_configObjects: {}
