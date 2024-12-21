@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class ScissorsAttackAI : MonoBehaviour
 {
@@ -17,13 +18,16 @@ public class ScissorsAttackAI : MonoBehaviour
     private Animator animator;          // Reference to the Animator component
     private float wanderTimer;          // Timer for wandering
     private float attackTimer;          // Timer to handle attack cooldown
+    public int yPosition = 0;
 
     void Start()
     {
+
         navAgent = GetComponent<NavMeshAgent>();   // Get the NavMeshAgent component
         animator = GetComponent<Animator>();       // Get the Animator component
         attackTimer = 0f;                         // Initialize attack cooldown
         wanderTimer = wanderCooldown;             // Initialize the wander timer
+        transform.position = new Vector3(0, yPosition, 0);
     }
 
     void Update()
