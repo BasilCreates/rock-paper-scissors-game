@@ -1,0 +1,298 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2629796989905385809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3401689695426700267}
+  - component: {fileID: 1772977154385833038}
+  - component: {fileID: 4575118589024802948}
+  - component: {fileID: 8342623033254086242}
+  - component: {fileID: 8342623033254086243}
+  - component: {fileID: 8342623033254086240}
+  - component: {fileID: 8342623033254086241}
+  m_Layer: 0
+  m_Name: Cowboy (Rock Player)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3401689695426700267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629796989905385809}
+  m_LocalRotation: {x: -0.017566968, y: -0.9881509, z: 0.023874922, w: 0.15059608}
+  m_LocalPosition: {x: 305.6, y: 198.9, z: -239.4}
+  m_LocalScale: {x: 15, y: 18, z: 15}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8342623033140224398}
+  - {fileID: 8342623034187460267}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 2.401, y: -162.619, z: 2.404}
+--- !u!33 &1772977154385833038
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629796989905385809}
+  m_Mesh: {fileID: -8205833897836338484, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+--- !u!23 &4575118589024802948
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629796989905385809}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -3522955778539423533, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: 9128465353232387916, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -2415484421190146016, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -6872120457756275524, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: 2771906581424072483, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -876546973899608171, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: 2768710986838361614, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -3846018093981099296, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -8618920926035418054, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -4192297992474313835, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -7838416433802765973, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -6974606749012444556, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: 437309955115709277, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -8114710551979355397, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -1205484597003601289, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -4252823402128746639, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8342623033254086242
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629796989905385809}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 84
+  m_CollisionDetection: 2
+--- !u!65 &8342623033254086243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629796989905385809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.71, y: 7.98, z: 3.86}
+  m_Center: {x: 0.5146531, y: -0.25, z: -0.02}
+--- !u!114 &8342623033254086240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629796989905385809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1ceb8159852694892fb367bb8734e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthTextAI: {fileID: 0}
+  startingHealth: 100
+  currentHealth: 0
+  paperDamage: 10
+  scissorDamage: 2
+  rockDamage: 5
+--- !u!114 &8342623033254086241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629796989905385809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71e0060cf2fda542a2c6c80d457b247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 500
+  jumpForce: 30
+  fallMultiplier: 30
+  lookSpeedX: 2
+  rb: {fileID: 8342623033254086242}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  isGrounded: 0
+--- !u!1 &8342623033140224397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8342623033140224398}
+  - component: {fileID: 8342623033140224112}
+  m_Layer: 0
+  m_Name: Rock Player Cowboy Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8342623033140224398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342623033140224397}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 2.21, y: 1.18, z: -1.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3401689695426700267}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!20 &8342623033140224112
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342623033140224397}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!1 &8342623034187460266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8342623034187460267}
+  - component: {fileID: 8342623034187460268}
+  m_Layer: 0
+  m_Name: Cowboy Rock Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8342623034187460267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342623034187460266}
+  m_LocalRotation: {x: -0.45371994, y: -0.7313119, z: 0.48978776, w: -0.13938844}
+  m_LocalPosition: {x: 3.4500477, y: -0.43001667, z: -3.2200737}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3401689695426700267}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 57.444, y: -153.444, z: 78.369}
+--- !u!114 &8342623034187460268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342623034187460266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b00a81811e72234296e9561aa4ef6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockPrefab: {fileID: 168044127165268443, guid: 380f2fd19227d67469d153a67d7d3c10, type: 3}
+  objectSpawner: {fileID: 8342623034187460267}
+  launchAngle: 45
+  launchSpeed: 1000
+  gravityMultiplier: 50

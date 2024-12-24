@@ -18,7 +18,7 @@ public class ScissorThrower : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             // Trigger the "Scissor attack" animation
-            GetComponent<Animator>().SetTrigger("ScissorAttack");
+            GetComponent<Animator>().SetTrigger("PlayerAttack");
         }
     }
 }

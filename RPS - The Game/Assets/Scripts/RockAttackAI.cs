@@ -1,14 +1,11 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class RockAttackAI : MonoBehaviour
 {
     public Transform[] players;         // Array of player transforms
-    public Transform[] randomPoints;    // Array of random walk points
     public float detectionRange = 20f;  // Maximum range to detect a player
     public float rotationSpeed = 5f;    // Speed of turning to face the player
-    public float wanderCooldown = 5f;   // Time between picking random wander points
     public GameObject rockPrefab;       // Prefab of the rock object to spawn
     public Transform objectSpawner;     // Reference to the empty GameObject (spawner)
     public float launchAngle = 45f;     // Angle in degrees for the arc
@@ -17,39 +14,31 @@ public class RockAttackAI : MonoBehaviour
     public float attackCooldown = 2f;   // Time in seconds between attacks
 
     private NavMeshAgent navAgent;      // Reference to the NavMeshAgent component
-    private float wanderTimer;          // Timer for wandering
     private float attackTimer;          // Timer to track cooldown between attacks
 
     void Start()
     {
         navAgent = GetComponent<NavMeshAgent>(); // Get the NavMeshAgent component
-        attackTimer = attackCooldown;             // Initialize the attack cooldown timer
-        wanderTimer = wanderCooldown;            // Initialize the wander timer
+        attackTimer = attackCooldown;            // Initialize the attack cooldown timer
     }
 
     void Update()
     {
-        if (players.Length == 0 || randomPoints.Length == 0) return; // Exit if no players or random points are assigned
+        if (players.Length == 0) return; // Exit if no players are assigned
 
         Transform closestPlayer = GetClosestPlayer();
 
         if (closestPlayer != null)
         {
             navAgent.SetDestination(closestPlayer.position); // Move towards the player
+            RotateToFacePlayer(closestPlayer);               // Rotate to face the player
 
-            // Rotate to face the player
-            RotateToFacePlayer(closestPlayer);
-
-            // Only attack if the player is within range and attack cooldown is finished
+            // Attack if within range and cooldown is finished
             if (Vector3.Distance(transform.position, closestPlayer.position) <= detectionRange && attackTimer <= 0)
             {
                 ThrowRock();
                 attackTimer = attackCooldown; // Reset the attack cooldown timer
             }
-        }
-        else
-        {
-            Wander(); // Wander to random spots if no player is in range
         }
 
         // Reduce the attack timer if it's above 0
@@ -67,11 +56,14 @@ public class RockAttackAI : MonoBehaviour
 
         foreach (Transform player in players)
         {
-            float distance = Vector3.Distance(transform.position, player.position);
-            if (distance <= detectionRange && distance < closestDistance)
+            if (player.gameObject.activeInHierarchy) // Check if the player is active
             {
-                closestDistance = distance;
-                closest = player;
+                float distance = Vector3.Distance(transform.position, player.position);
+                if (distance <= detectionRange && distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closest = player;
+                }
             }
         }
 
@@ -88,19 +80,6 @@ public class RockAttackAI : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-    // Wander to a random point
-    void Wander()
-    {
-        wanderTimer -= Time.deltaTime;
-
-        if (wanderTimer <= 0)
-        {
-            Transform randomPoint = randomPoints[Random.Range(0, randomPoints.Length)];
-            navAgent.SetDestination(randomPoint.position); // Move to a random point
-            wanderTimer = wanderCooldown; // Reset the wander timer
-        }
-    }
-
     // Automatically throw a rock at the player
     void ThrowRock()
     {
@@ -108,7 +87,7 @@ public class RockAttackAI : MonoBehaviour
         StartCoroutine(MoveRockInArc(rockObject, objectSpawner.forward)); // Launch rock
     }
 
-    private IEnumerator MoveRockInArc(GameObject rockObject, Vector3 launchDirection)
+    private System.Collections.IEnumerator MoveRockInArc(GameObject rockObject, Vector3 launchDirection)
     {
         // Convert launch angle to radians
         float angleInRadians = launchAngle * Mathf.Deg2Rad;

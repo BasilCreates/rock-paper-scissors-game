@@ -6,18 +6,15 @@ using UnityEngine.AI;
 public class PaperAttackAI : MonoBehaviour
 {
     public Transform[] players;         // Array of player transforms
-    public Transform[] randomPoints;    // Array of random walk points
     public GameObject paperPrefab;      // Prefab of the paper object to spawn
     public Transform objectSpawner;     // Reference to the spawner
     public float detectionRange = 20f;  // Maximum range to detect a player
     public float rotationSpeed = 5f;    // Speed of turning to face the player
-    public float wanderCooldown = 5f;  // Time between picking random wander points
     public float attackDelay = 2f;      // Delay between consecutive attacks
     public float moveSpeed = 10f;       // Speed of the paper projectile
     public float lifetime = 4f;         // Lifetime of the projectile
 
     private NavMeshAgent navAgent;      // Reference to the NavMeshAgent component
-    private float wanderTimer;          // Timer for wandering
     private bool canAttack = true;      // Flag to control attack delay
 
     void Start()
@@ -27,7 +24,7 @@ public class PaperAttackAI : MonoBehaviour
 
     void Update()
     {
-        if (players.Length == 0 || randomPoints.Length == 0) return; // Exit if no players or random points are assigned
+        if (players.Length == 0) return; // Exit if no players are assigned
 
         Transform closestPlayer = GetClosestPlayer();
 
@@ -44,12 +41,8 @@ public class PaperAttackAI : MonoBehaviour
                 StartCoroutine(AttackPlayer());
             }
         }
-
-        // Wander if no player is in range
-        Wander();
     }
 
-    // Finds the closest player within the detection range
     Transform GetClosestPlayer()
     {
         Transform closest = null;
@@ -57,11 +50,14 @@ public class PaperAttackAI : MonoBehaviour
 
         foreach (Transform player in players)
         {
-            float distance = Vector3.Distance(transform.position, player.position);
-            if (distance <= detectionRange && distance < closestDistance)
+            if (player.gameObject.activeInHierarchy) // Check if the player is active
             {
-                closestDistance = distance;
-                closest = player;
+                float distance = Vector3.Distance(transform.position, player.position);
+                if (distance <= detectionRange && distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closest = player;
+                }
             }
         }
 
@@ -76,19 +72,6 @@ public class PaperAttackAI : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-    }
-
-    // Wander to a random point
-    void Wander()
-    {
-        wanderTimer -= Time.deltaTime;
-
-        if (wanderTimer <= 0)
-        {
-            Transform randomPoint = randomPoints[Random.Range(0, randomPoints.Length)];
-            navAgent.SetDestination(randomPoint.position);
-            wanderTimer = wanderCooldown; // Reset the wander timer
-        }
     }
 
     // Attack the player by shooting a paper projectile

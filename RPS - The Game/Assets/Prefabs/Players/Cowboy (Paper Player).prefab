@@ -1,0 +1,298 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &485423081553230927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485423081553230926}
+  - component: {fileID: 485423081553230924}
+  m_Layer: 0
+  m_Name: 'Paper Player Cowboy Camera '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &485423081553230926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485423081553230927}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 1.55, y: 1.31, z: -0.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6574867687561853562}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!20 &485423081553230924
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485423081553230927}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!1 &485423083084354542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485423083084354541}
+  - component: {fileID: 485423083084354540}
+  m_Layer: 0
+  m_Name: Cowboy Paper Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &485423083084354541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485423083084354542}
+  m_LocalRotation: {x: -0.00000001120903, y: -0.9999415, z: -0.000000022359547, w: -0.010818274}
+  m_LocalPosition: {x: 2.56, y: -0.67, z: -3.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6574867687561853562}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -181.24, z: 0}
+--- !u!114 &485423083084354540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485423083084354542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cf96c3e9e0cc9469ee9795ffa1878e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paperPrefab: {fileID: 2467720301043704643, guid: ce5af2bcbc9b2df489cacb0baed391ce, type: 3}
+  objectSpawner: {fileID: 485423083084354541}
+  moveSpeed: 500
+  lifetime: 0.6
+--- !u!1 &5797628052898914496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6574867687561853562}
+  - component: {fileID: 7823109648744871391}
+  - component: {fileID: 5437449552121463061}
+  - component: {fileID: 485423083297519626}
+  - component: {fileID: 485423083297519625}
+  - component: {fileID: 485423083297519628}
+  - component: {fileID: 485423083297519627}
+  m_Layer: 0
+  m_Name: Cowboy (Paper Player)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6574867687561853562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797628052898914496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 721, y: 278, z: -224}
+  m_LocalScale: {x: 15.000003, y: 17.999998, z: 15.0001335}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 485423081553230926}
+  - {fileID: 485423083084354541}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7823109648744871391
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797628052898914496}
+  m_Mesh: {fileID: -8205833897836338484, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+--- !u!23 &5437449552121463061
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797628052898914496}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -3522955778539423533, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: 9128465353232387916, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -2415484421190146016, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -6872120457756275524, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: 2771906581424072483, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -876546973899608171, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: 2768710986838361614, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -3846018093981099296, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -8618920926035418054, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -4192297992474313835, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -7838416433802765973, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -6974606749012444556, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: 437309955115709277, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -8114710551979355397, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -1205484597003601289, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  - {fileID: -4252823402128746639, guid: ee2be654283d7e942b0887d260c63e1b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &485423083297519626
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797628052898914496}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 84
+  m_CollisionDetection: 2
+--- !u!136 &485423083297519625
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797628052898914496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 3.05
+  m_Height: 8.5254965
+  m_Direction: 1
+  m_Center: {x: 0.51465285, y: -0.68, z: 0.13}
+--- !u!114 &485423083297519628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797628052898914496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc53268ce64c60543a1c141d453ce787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthTextAI: {fileID: 0}
+  startingHealth: 100
+  currentHealth: 0
+  paperDamage: 5
+  scissorDamage: 10
+  rockDamage: 2
+--- !u!114 &485423083297519627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5797628052898914496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71e0060cf2fda542a2c6c80d457b247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 500
+  jumpForce: 30
+  fallMultiplier: 30
+  lookSpeedX: 2
+  rb: {fileID: 485423083297519626}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  isGrounded: 0

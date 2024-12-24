@@ -34,21 +34,21 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveDirection = Vector3.zero;
 
         // Check individual key presses for movement
-        if (Input.GetKey(KeyCode.W)) // Move forward
+        if (Input.GetKey(KeyCode.W)) // Move backward instead of forward
         {
-            moveDirection += transform.forward; // Forward direction
+            moveDirection += -transform.forward; // Reversed forward direction
         }
-        if (Input.GetKey(KeyCode.S)) // Move backward
+        if (Input.GetKey(KeyCode.S)) // Move forward instead of backward
         {
-            moveDirection += -transform.forward; // Backward direction
+            moveDirection += transform.forward; // Reversed backward direction
         }
-        if (Input.GetKey(KeyCode.A)) // Move left
+        if (Input.GetKey(KeyCode.A)) // Move right instead of left
         {
-            moveDirection += -transform.right; // Left direction
+            moveDirection += transform.right; // Reversed left direction
         }
-        if (Input.GetKey(KeyCode.D)) // Move right
+        if (Input.GetKey(KeyCode.D)) // Move left instead of right
         {
-            moveDirection += transform.right; // Right direction
+            moveDirection += -transform.right; // Reversed right direction
         }
 
         // Normalize the direction to maintain consistent speed
@@ -71,8 +71,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Check if the player is grounded. A physics,checksphere means it makes an invisible sphere that checks the radius around the object.
-        // it checks if anything intersects inside the sphere like a groundmask, then makes the bool true or false depending.
+        // Check if the player is grounded. A physics CheckSphere makes an invisible sphere that checks the radius around the object.
+        // It checks if anything intersects inside the sphere like a groundMask, then makes the bool true or false depending.
         isGrounded = Physics.CheckSphere(transform.position, 50f, groundMask);
     }
 
@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            transform.position += new Vector3(0, jumpForce, 0); // manually adds height to the character after jumping
+            transform.position += new Vector3(0, jumpForce, 0); // Manually adds height to the character after jumping
         }
     }
 }
