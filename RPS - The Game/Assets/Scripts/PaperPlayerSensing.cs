@@ -47,9 +47,6 @@ public class PaperPlayerSensing : MonoBehaviour
             print("Player hit by Scissors Projectile");
             // Scissors vs Paper: Paper beats Scissors, Player takes full damage
             currentHealth -= scissorDamage;
-
-            // Update health and destroy the projectile
-            DestroyProjectile(other);
         }
 
         // Ensure health doesn't drop below 0

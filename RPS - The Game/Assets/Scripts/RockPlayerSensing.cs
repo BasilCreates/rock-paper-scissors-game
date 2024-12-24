@@ -42,7 +42,6 @@ public class RockPlayerSensing : MonoBehaviour
             print("Player hit by Scissors Projectile");
             // Scissors vs Rock: Rock beats Scissors, so Rock takes minimal damage
             currentHealth -= scissorDamage;
-            DestroyProjectile(other);
         }
 
         // Ensure health doesn't drop below 0

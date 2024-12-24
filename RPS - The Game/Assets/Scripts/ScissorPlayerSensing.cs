@@ -42,7 +42,6 @@ public class ScissorPlayerSensing : MonoBehaviour
             print("Player hit by Scissors Projectile");
             // Scissors vs Scissors: It's a draw, so Scissors takes minimal damage
             currentHealth -= scissorDamage;
-            DestroyProjectile(other);
         }
 
         // Ensure health doesn't drop below 0
